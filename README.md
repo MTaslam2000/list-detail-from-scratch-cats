@@ -31,6 +31,7 @@ Additional considerations:
 -   grab div with querySelector
 -   make an eventListener that activates on 'load' this will contain my my 'for let-of' function
 -   also set my fetch function aka getCats() to array name
+-   make click event listener that will need my getCat(id) function
 
 ##render-utils.js
 
