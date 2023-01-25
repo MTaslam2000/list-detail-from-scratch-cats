@@ -1,5 +1,6 @@
 /* Imports */
 import { getCat, getCats } from './fetch-utils.js';
+import { renderCatCard } from './render-utils.js';
 // import { renderCatsCard, renderCatDetails } from 'render-utils.js';
 
 /* Get DOM Elements */
@@ -15,21 +16,9 @@ window.addEventListener('load', async () => {
     console.log(cats);
     // now render then append
     for (let cat of cats) {
-        const div = document.createElement('div');
-        const img = document.createElement('img');
-        const p = document.createElement('p');
-
-        div.classList.add('dog-card');
-
-        p.textContent = cat.name;
-        img.src = `./assets/${cat.id}.png`;
-
-        div.append(p, img);
-        catListContainer.append(div);
+        const catEl = renderCatCard(cat);
+        catListContainer.append(catEl);
     }
-
-    return catListContainer;
-
 });
 /* Display Functions */
 
