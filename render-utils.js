@@ -6,9 +6,9 @@ export function renderCatCard(cat) {
 
     div.classList.add('cat-card');
 
-    p.textContent = cat.name;
+    p.textContent = `look for details on ${cat.name}`;
     img.src = `./assets/${cat.id}.png`;
-    a.href = 
+    a.href = `./detail/?id=${cat.id}`;
 
     div.append(p, img);
     a.append(div);

@@ -17,7 +17,8 @@ export async function getCat(id) {
     const { data, error } = await client
         .from('cats_table')
         .select('*')
-        .match(id);
+        .eq('id', 1)
+        .single();
     // Always return at the end of a pure function
     return data;
 }
