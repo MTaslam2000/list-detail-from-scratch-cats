@@ -25,3 +25,21 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+##app.js
+
+-   grab div with querySelector
+-   make an eventListener that activates on 'load' this will contain my my 'for let-of' function
+-   also set my fetch function aka getCats() to array name
+-   make click event listener that will need my getCat(id) function
+
+##render-utils.js
+
+-   make renderCatCard function and pass (cat) in the parameter
+    -   Create necessary DOM elements
+-   make renderCatDetails function and pass (cat) in the parameter
+    -   Create necessary DOM elements with details then append to a div
+
+##fetch-utils.js
+
+-   input my supabase URL and KEY then call my client variable
