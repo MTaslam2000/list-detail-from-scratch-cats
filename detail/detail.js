@@ -5,8 +5,10 @@ const mainElDetailsContainer = document.querySelector('main');
 let catData = {};
 
 window.addEventListener('load', async () => {
-    const cat = await getCat();
+    const data = new URLSearchParams(window.location.search);
+    const id = data.get('id')
+    const cat = await getCat(id);
 
-    console.log(cat);
+    mainElDetailsContainer.append(JSON.stringify(cat));
 
 });
