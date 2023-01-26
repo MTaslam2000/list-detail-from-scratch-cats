@@ -6,7 +6,7 @@ let catData = {};
 
 window.addEventListener('load', async () => {
     const data = new URLSearchParams(window.location.search);
-    const id = data.get('id')
+    const id = data.get('id');
     const cat = await getCat(id);
 
     const div = document.createElement('div');
