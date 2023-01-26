@@ -8,7 +8,7 @@ export async function getCats() {
     const { data, error } = await client
         .from('cats_table')
         .select('*');
-
+    // Always return at the end of a pure function
     return data;
 }
 
